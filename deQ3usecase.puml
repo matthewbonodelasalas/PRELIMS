@@ -1,0 +1,15 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+Actor Customer
+Actor Clerk
+Actor Bank
+Actor Administrator
+ rectangle POS_Terminal {
+ Customer--(checkout):1:
+ (checkout)--Clerk:1:
+ (checkout)--Bank
+ (Manage Users)---Administrator
+
+ }
+@enduml
